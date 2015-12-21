@@ -5,6 +5,7 @@ $dark-color:#000
 $red-color:#9B1818
 $blue-color:#003469
 $green-color:#67bc5c
+$white-color: #fff
 
 h1
 	color:#fff
@@ -13,7 +14,8 @@ h1
 	font-weight: bold
 	font-family: "CleanvertisingLight", sans-serif
 	margin: 0px
-section
+section,
+footer
 	padding:58px 0 68px
 	&.s_dark
 		h2,h3,p
@@ -39,7 +41,7 @@ body
 	position: relative
 	line-height: 1.6
 	-webkit-font-smoothing: antialised
-
+	overflow-x: hidden
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
 	color: red
@@ -63,24 +65,33 @@ header
 	font-size: 40px
 	font-family: "RobotoBold",sans-serif
 	font-weight: bold
-.top_phone
+.top_phone,
+.bottom_phone
 	text-align: right
+.bottom_phone
+	text-align:center
+	margin-top: 60px
+	color:$red-color
 .tab_item
 	display:none
 .tab_item:first-child
 	display:block
-.top_phone .wrapper .tab
-	text-transform: uppercase
-	cursor: pointer
+.top_phone ,.bottom_phone
+	.wrapper .tab
+		text-transform: uppercase
+		cursor: pointer
 
-.top_phone .wrapper .active
-	text-decoration: underline
-.top_phone .tab_item
-	display: none
-	font-size: 34px
-	font-family: "RobotoBold", sans-serif
-.top_phone .tab_item:first-child
-	display: block
+.top_phone,.bottom_phone
+	.wrapper .active
+		text-decoration: underline
+.top_phone,.bottom_phone
+	.tab_item
+		display: none
+		font-size: 34px
+		font-family: "RobotoBold", sans-serif
+.top_phone,.bottom_phone 
+	.tab_item:first-child
+		display: block
 .top_header
 	 margin-top: 75px
 	 h2
@@ -147,7 +158,10 @@ header
      background-color: $red-color
     &.btn_green	
      background-color: $green-color
-	
+    &.btn_white
+     color: black
+     background-color: white
+	 
     
 a.button
    color: #fff
@@ -251,7 +265,7 @@ form
 	input,
 	select
 		display: block
-		line-height: 40px
+		line-height: 32px         
 		height: 40px
 		border: #D9D9D9 3px solid
 		box-shadow: 0 0 20px rgba(0,0,0,.06) inset
@@ -259,6 +273,8 @@ form
 		text-indent: 10px
 		font-size: 20px
 		margin-top: 3px
+		-webkit-appearance: none
+		
 		&:focus
 			box-shadow: $green-color 0 0 0 2px
 			border-radius: 3px
@@ -272,6 +288,133 @@ form
 		margin: 30px 0 10px
 .s_review
 	background-image: url("../img/middle_bg.jpg")
-	background-repeat: repeat-x
 	background-attachment:fixed
 	min-height:500px
+	background-size: cover
+	background-color: #412521
+.review_item
+	color:#fff
+	text-align: center
+	h4
+		font-family: "Times New Roman",sans-serif
+		font-style: italic
+		font-size: 22px
+		font-weight: normal
+		margin-top: 20px
+		margin-bottom: 20px
+	
+	p
+		margin:30px auto 0
+		display: inline-block
+		float: none
+		font-size: 15px
+	.image_wrap
+		text-align: center
+		img
+			width: 165px
+			height: 165px
+			display: inline-block
+			border-radius: 50%
+			border: #585A5B 10px solid
+.hr
+	width: 80px
+	height: 1px
+	margin:auto
+	background-color: #CEA380
+.owl-nav
+	div
+		width: 37px
+		height: 140px
+		background-image: url("../img/arrow.png")
+		position: absolute
+		top:20px
+		opacity: .5
+		&.owl-next
+			right: 0
+			background-position: top right
+.owl-dots
+	width: 100%
+	margin-top: 30px
+	text-align: center
+	.owl-dot	
+		width: 14px
+		height: 14px
+		background-color: #FFF
+		display: inline-block
+		margin: 0 4px	
+		border-radius: 50%
+		opacity: .5
+		&.active
+			opacity: .8
+
+.s_back
+	background-image: url("../img/red_bg.jpg")
+	background-position: top center
+	text-align: center
+	padding:40px 0
+	h3
+		margin-top: 0
+		text-transform: uppercase
+		font-weight: normal
+		font-size: 26px
+		text-align: center
+		background-color: rgba(255,255,255,.13)
+		padding:10px 0
+	a
+		color:black
+.s_contacts
+	padding-bottom: 0
+	.wrapper
+		margin-top: 15px
+		font-size: 18px
+	.contacts_top		
+	text-align: center
+	h2
+		color:#000
+		display: inline-block
+		vertical-align: middle
+		margin-bottom: 0
+		height: 45px
+		line-height: 45px
+	.tabs
+		display: inline-block
+		vertical-align: middle
+		height: 45px
+		line-height: 45px
+		margin-left: 20px
+		.tab
+			float: left
+			padding: 0 60px
+			border: $red-color 5px solid
+			line-height:38px
+			color:$red-color
+			&:first-child
+				border-radius:3px 0 0 3px
+			&:last-child
+				border-radius:0 3px 3px 0
+			&.active
+				background-color: $red-color
+				color:#fff
+.map	
+	margin-top: 20px
+	min-height:480px
+	background-color: #E1D6B0
+footer
+	.button_wrap
+		text-align: center
+		margin-top: 30px
+	h2
+		color: black
+		margin-bottom: 30px
+	p
+		font-size: 18px
+		text-align: center
+		margin-top: 0
+#hidden_form,
+#form_back
+	max-width:420px
+	margin:auto
+	position: relative
+	h2
+		text-align: center
+		font-weight: normal

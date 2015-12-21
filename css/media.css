@@ -36,7 +36,9 @@
 .top_phone .tab_item{
 	font-size: 30px;
 }
-
+s|_contacts h2{
+	margin-bottom: 20px;
+}
 }
 @media only screen and (max-width : 600px) {
 .profi_item{
@@ -69,6 +71,9 @@
 		font-size: 38px;
 		line-height: 42px;
 		margin-bottom: 25px;
+	}
+	.s_contacts .tabs .tab{
+		padding: 0 20px;
 	}
 }
 
